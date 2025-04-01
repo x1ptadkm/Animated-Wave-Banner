@@ -30,18 +30,24 @@ body {
   align-items: center;
 }
 
-.profile-img img {
-  width: 150px;
+/* Profile image */
+.profile-img {
+  width: 150px; /* Kích thước cố định cho ảnh */
   height: 150px;
-  border-radius: 50%;
-  border: 5px solid #00c4cc;
-  margin-bottom: 20px;
-  transition: transform 0.3s;
+  border-radius: 50%; /* Tạo khung tròn */
+  overflow: hidden; /* Đảm bảo không bị tràn ra ngoài khung tròn */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #00c4cc; /* Đường viền của khung tròn */
 }
 
-.profile-img img:hover {
-  transform: scale(1.1);
+.profile-img img {
+  width: 100%; /* Đảm bảo ảnh chiếm đầy khung tròn */
+  height: 100%; /* Đảm bảo ảnh chiếm đầy khung tròn */
+  object-fit: cover; /* Đảm bảo ảnh không bị kéo giãn */
 }
+
 
 .banner h2 {
   font-size: 2.5rem;
